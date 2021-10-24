@@ -2,6 +2,7 @@ package lecture2lib
 
 import (
 	"errors"
+	"github.com/aidarkhanov/nanoid/v2"
 	"math"
 	"unicode"
 )
@@ -23,4 +24,9 @@ func FindQuadraticRoots(a, b, c float64) (float64, float64, error) {
 	r1 := (-b + d) / (2 * a)
 	r2 := (-b - d) / (2 * a)
 	return r1, r2, nil
+}
+
+func GenerateUUID() string {
+	uuid, _ := nanoid.New()
+	return uuid
 }
